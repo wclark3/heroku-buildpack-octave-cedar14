@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+echo "-----> installing Octave + Dynare like a boss"
+echo "-----> using Octave 3.8.2 and Dynare 4.4.2"
+
+# change to the the BUILD_DIR ($1)
+build_dir=$1
+cd $build_dir
+
+echo "-----> downloading binaries"
+
+# download tarballs from S3
+curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/dynare-4.4.2.tar.gz -s -O
+curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/octave-3.8.2.tar.gz -s -O
+curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/octave-libs.tar.gz -s -O
+
+echo "-----> untarring binaries"
+
+# untar the packages
+tar -C vendor -xzf dynare-4.4.2.tar.gz
+tar -C vendor -xzf octave-3.8.2.tar.gz
+tar -C vendor -xzf octave-libs.tar.gz
+
+echo "-----> cleaning up mess"
+
+# cleanup
+rm *.tar.gz
