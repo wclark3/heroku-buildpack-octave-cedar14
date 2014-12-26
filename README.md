@@ -1,4 +1,4 @@
-heroku-buildpack-octave-cedar14
+Heroku Buildpack for Octave
 ======================================
 
 Heroku buildpack for [Octave](https://www.gnu.org/software/octave/) that works on the new [Cedar 14](https://devcenter.heroku.com/articles/cedar) stack.
