@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
-echo "-----> installing Octave + Dynare like a boss"
-echo "-----> using Octave 3.8.2 and Dynare 4.4.2"
+echo "-----> installing Octave version 3.8.2"
 
 # change to the the BUILD_DIR ($1)
 BUILD_DIR=$1
@@ -12,22 +11,22 @@ cd $BUILD_DIR
 echo "-----> downloading binaries"
 
 # download tarballs from S3
-curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/dynare-4.4.2.tar.gz -s -O
-curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/octave-3.8.2.tar.gz -s -O
-curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/octave-libs.tar.gz -s -O
+curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/gcc-4.9.2.tar.gz -s -O
+curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/octave-3.8.2.tar.gz -s -O 
 
 echo "-----> untarring binaries"
 
 # untar the packages
-tar -C vendor -xzf dynare-4.4.2.tar.gz
+tar -C vendor -xzf gcc-4.9.2.tar.gz
 tar -C vendor -xzf octave-3.8.2.tar.gz
-tar -C vendor -xzf octave-libs.tar.gz
 
-echo "-----> cleaning up mess"
+echo "-----> update environment"
 
 # copy over environment
 mkdir -p $BUILD_DIR/.profile.d
 cp "$BUILDPACK_DIR/bin/octave_environment.sh" $BUILD_DIR/.profile.d/octave_environment.sh
+
+echo "-----> clean up mess"
 
 # cleanup
 rm *.tar.gz
