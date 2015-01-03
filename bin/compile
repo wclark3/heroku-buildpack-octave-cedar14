@@ -20,7 +20,7 @@ echo "-----> untarring binaries"
 #tar -C vendor -xzf gcc-4.9.2.tar.gz
 #tar -C vendor -xzf octave-3.8.2.tar.gz
 tar -xzf gcc-4.9.2.tar.gz
-tar -xzf octave.3.8.2.tar.gz
+tar -xzf octave-3.8.2.tar.gz
 
 echo "-----> update environment"
 
