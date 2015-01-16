@@ -4,8 +4,8 @@
 echo "-----> installing Octave version 3.8.2"
 
 # change to the the BUILD_DIR ($1)
-build_dir=$1
-cd $build_dir
+BUILD_DIR=$1
+cd $BUILD_DIR
 
 echo "-----> downloading binaries"
 
@@ -16,8 +16,8 @@ curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/octave-3.8.2.tar.gz -
 echo "-----> untarring binaries"
 
 # untar the packages
-tar -C vendor -xzf gcc-4.9.2.tar.gz
-tar -C vendor -xzf octave-3.8.2.tar.gz
+tar -C .heroku -xzf gcc-4.9.2.tar.gz
+tar -C .heroku -xzf octave-3.8.2.tar.gz
 #tar -xzf gcc-4.9.2.tar.gz
 #tar -xzf octave-3.8.2.tar.gz
 
