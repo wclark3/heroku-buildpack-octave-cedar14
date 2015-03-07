@@ -21,4 +21,4 @@ $ heroku run octave
 ```
 
 ## License
-MIT License. Copyright (c) 2014 Will Clark. See LICENSE for details.
+MIT License. Copyright (c) 2014-2015 Will Clark. See LICENSE for details.
