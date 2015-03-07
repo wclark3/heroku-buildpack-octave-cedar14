@@ -17,8 +17,8 @@ curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/octave-3.8.2-bin.tar.
 echo "-----> untarring binaries"
 
 # untar the packages
-tar -xzf gcc-4.9.2-mbin.tar.gz
-tar -xzf octave-3.8.2-bin.tar.gz
+tar -xzf gcc-4.9.2-mbin.tar.gz -C /app/.heroku
+tar -xzf octave-3.8.2-bin.tar.gz -C /app/.heroku
 
 echo "-----> update environment"
 
