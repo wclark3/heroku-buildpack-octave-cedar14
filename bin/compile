@@ -5,6 +5,7 @@ echo "-----> installing Octave version 3.8.2"
 
 # change to the the BUILD_DIR ($1)
 BUILD_DIR=$1
+BUILDPACK_DIR="$(dirname $(dirname $0))"
 cd $BUILD_DIR
 
 echo "-----> downloading binaries"
