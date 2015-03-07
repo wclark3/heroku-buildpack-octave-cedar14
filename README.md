@@ -19,6 +19,7 @@ You can also run Octave in the console as follows:
 ```
 $ heroku run octave
 ```
+I'm not sure why you would want to do this, but you can, and the guy that wrote the [R buildpack](https://github.com/virtualstaticvoid/heroku-buildpack-r) has this feature so I figured it might be useful.
 
 ## License
 MIT License. Copyright (c) 2014-2015 Will Clark. See LICENSE for details.
