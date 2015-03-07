@@ -10,13 +10,13 @@ cd $BUILD_DIR
 echo "-----> downloading binaries"
 
 # download tarballs from S3
-curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/gcc-4.9.2-bin.tar.gz -s -O
+curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/gcc-4.9.2-mbin.tar.gz -s -O
 curl https://s3.amazonaws.com/heroku-octave-dynare-cedar14/octave-3.8.2-bin.tar.gz -s -O 
 
 echo "-----> untarring binaries"
 
 # untar the packages
-tar -xzf gcc-4.9.2-bin.tar.gz
+tar -xzf gcc-4.9.2-mbin.tar.gz
 tar -xzf octave-3.8.2-bin.tar.gz
 
 echo "-----> update environment"
