@@ -4,14 +4,13 @@
 echo "-----> installing Octave version 3.8.2"
 
 # change to the the BUILD_DIR ($1)
-EXEC_DIR=$0
+PROGRAM=$0
 BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 BUILDPACK_DIR="$(dirname $(dirname $0))"
 HEROKU_DIR=$BUILD_DIR/.heroku
-#HEROKU_DIR=$CACHE_DIR/.heroku
-echo "       EXEC_DIR=${EXEC_DIR}"
+echo "       PROGRAM=${PROGRAM}"
 echo "       BUILD_DIR=${BUILD_DIR}"
 echo "       CACHE_DIR=${CACHE_DIR}"
 echo "       ENV_DIR=${ENV_DIR}"
