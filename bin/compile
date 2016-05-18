@@ -5,8 +5,11 @@ echo "-----> installing Octave version 3.8.2"
 
 # change to the the BUILD_DIR ($1)
 BUILD_DIR=$1
+echo "-----> BUILD_DIR=${BUILD_DIR}"
 BUILDPACK_DIR="$(dirname $(dirname $0))"
+echo "-----> BUILDPACK_DIR=${BUILDPACK_DIR}"
 HEROKU_DIR=$BUILD_DIR/.heroku
+echo "-----> HEROKU_DIR=${HEROKU_DIR}"
 cd $BUILD_DIR
 
 echo "-----> downloading binaries"
